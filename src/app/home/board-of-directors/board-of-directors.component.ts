@@ -22,7 +22,7 @@ loading:any;
   }, 1000);
     this.data = boardOfDirectorsJsonData;
 
-    console.log("boardOfDirectorsJsonData : ",this.data);
+    // console.log("boardOfDirectorsJsonData : ",this.data);
     
   }
 

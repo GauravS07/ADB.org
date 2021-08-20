@@ -50,13 +50,13 @@ export class HomeComponent implements OnInit {
   goToSideMenu(id: number){
     this.route.queryParams
       .subscribe(params => {
-        console.log(params.id);
+        // console.log(params.id);
         if(id == 1){
           this.router.navigate(['/presidents-message']);
-          console.log("id = 1");
+          // console.log("id = 1");
         } else if(id == 2){
           this.router.navigate(['/board-of-directors']);
-          console.log("id = 2");          
+          // console.log("id = 2");          
         } else if (id == 3){
           this.router.navigate(['/financial-highlights']);
         }

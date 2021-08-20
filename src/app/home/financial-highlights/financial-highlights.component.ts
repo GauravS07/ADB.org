@@ -25,7 +25,7 @@ export class FinancialHighlightsComponent implements OnInit {
     this.homeData = counterCardsJsonData;
     this.value = financialHighlightsJsonData; 
 
-    console.log("this.homeData >>> ",counterCardsJsonData,"\nfinancialHighlights >>> ",financialHighlightsJsonData,"\nvalue >>> ",this.value)
+    // console.log("this.homeData >>> ",counterCardsJsonData,"\nfinancialHighlights >>> ",financialHighlightsJsonData,"\nvalue >>> ",this.value)
 
     this.getTitle();
     this.getSubTitle();
@@ -35,7 +35,7 @@ export class FinancialHighlightsComponent implements OnInit {
     this.value.map(el => {
       if(el.type === 'title'){
         this.title = el.title ;
-        console.log("this.title >>>>> ",this.title);
+        // console.log("this.title >>>>> ",this.title);
       }     
     });
   }
@@ -44,7 +44,7 @@ export class FinancialHighlightsComponent implements OnInit {
     this.value.map(el => {
       if(el.type === 'title'){
         this.subTitle = el.subTitle ;
-        console.log("this.title >>>>> ",this.subTitle);
+        // console.log("this.title >>>>> ",this.subTitle);
       }     
     });
   }
