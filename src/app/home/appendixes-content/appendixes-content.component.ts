@@ -47,10 +47,15 @@ export class AppendixesContentComponent implements OnInit {
   list = [];
   id = [];
   images = [];
+  loading:any;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.loading=true;
+    setTimeout(() => {
+      this.loading = false;
+  }, 1000);
     this.data = appendixesContentJsonData;
     this.list = appendixesListJsonData;
 

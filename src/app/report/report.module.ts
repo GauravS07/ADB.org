@@ -8,6 +8,7 @@ import { Chapter2Component } from './chapter2/chapter2.component';
 
 
 
+
 @NgModule({
   declarations: [
     ReportComponent,
@@ -18,7 +19,7 @@ import { Chapter2Component } from './chapter2/chapter2.component';
     CommonModule,
     ReportRoutingModule,
     SharedModule,
-    HomeModule
+    HomeModule,
   ]
 })
 export class ReportModule { }

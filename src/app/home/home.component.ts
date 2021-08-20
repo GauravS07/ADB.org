@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
   chapterCards = [];
   smallCards = [];
   counterCardsJsonData = [];
+  loading: any;
 
   constructor(
     private router:Router,
@@ -23,11 +24,17 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.loading = true;
     this.homeData = homeJsonData;
     this.chapterCards = chapterCards;
     this.smallCards = smallCards;
     this.counterCardsJsonData = counterCardsJsonData;
     console.log("this.homeJsonData ",homeJsonData)
+
+    setTimeout(() => {
+      this.loading = false;
+  }, 1000);
+
   }
 
   goToReport(id:number){

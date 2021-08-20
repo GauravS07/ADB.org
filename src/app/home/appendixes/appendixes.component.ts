@@ -8,9 +8,14 @@ import { Router } from '@angular/router';
 })
 export class AppendixesComponent implements OnInit {
 
+  loading:any;
   constructor(private router:Router) { }
 
   ngOnInit(): void {
+    this.loading=true;
+    setTimeout(() => {
+      this.loading = false;
+  }, 1000);
   }
   onClick(){
     this.router.navigate(['/appendixes-content']);

@@ -1,5 +1,6 @@
-<!-- <div class="report">
-<div   *ngFor="let data of chapter1Data" > -->
+<div *ngIf="loading" class="loader">
+  <div class="loader__element"></div>
+</div>
 <div class="report">
   <div class="content">
     <div *ngFor="let data of data">
@@ -61,6 +62,7 @@
 
   </div>
   <br><br><br><br><br><br><br>
+  <!-- <ngx-spinner></ngx-spinner> -->
   <!-- <div>
     <app-menu-bar></app-menu-bar>
   </div> -->

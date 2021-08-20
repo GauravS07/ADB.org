@@ -13,12 +13,16 @@ export class MessageComponent implements OnInit {
   title: string;
   tagLine: string;
   imageGrid: any;
-
+  loading:any;
   constructor(
     private router: Router
   ) { }
 
   ngOnInit(): void {
+    this.loading=true;
+    setTimeout(() => {
+      this.loading = false;
+  }, 1000);
 
     this.data = presidentsMessage;
     this.title = presidentsMessage[16].title;

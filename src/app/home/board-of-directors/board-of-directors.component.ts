@@ -10,12 +10,16 @@ import boardOfDirectorsJsonData from 'src/app/constants/board-of-directors.json'
 export class BoardOfDirectorsComponent implements OnInit {
 
   data = [];
-
+loading:any;
   constructor(
     private router:Router
   ) { }
 
   ngOnInit(): void {
+    this.loading=true;
+    setTimeout(() => {
+      this.loading = false;
+  }, 1000);
     this.data = boardOfDirectorsJsonData;
 
     console.log("boardOfDirectorsJsonData : ",this.data);

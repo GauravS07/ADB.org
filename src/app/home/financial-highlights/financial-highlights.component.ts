@@ -13,10 +13,15 @@ export class FinancialHighlightsComponent implements OnInit {
   value = [];
   title: string;
   subTitle: string;
+  loading:any;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.loading=true;
+    setTimeout(() => {
+      this.loading = false;
+  }, 1000);
     this.homeData = counterCardsJsonData;
     this.value = financialHighlightsJsonData; 
 

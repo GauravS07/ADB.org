@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import chapter2CardJsonData from "../../constants/chapter2-cards.json";
+import { NgxSpinnerService } from "ngx-spinner";
 
 @Component({
   selector: 'app-chapter2',
@@ -10,15 +11,26 @@ import chapter2CardJsonData from "../../constants/chapter2-cards.json";
 export class Chapter2Component implements OnInit {
 
   chapter2Data = [];
+  loading: any;
 
   constructor(
+    private spinner: NgxSpinnerService,
+
     private router:Router,
     private route: ActivatedRoute
     ) { }
 
   ngOnInit(): void {
+    this.loading = true;
+    setTimeout(() => {
+      this.loading = false;
+  }, 1000);
     this.chapter2Data = chapter2CardJsonData;
     console.log("chapter2CardJsonData : ",chapter2CardJsonData);
+    setTimeout(() => {
+      this.spinner.hide();
+    }, 1000);
+  
     
   }
 

@@ -11,6 +11,10 @@ import { CommonModule } from '@angular/common';
 import { HomeModule } from './home/home.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+
+import { NgxSpinnerModule } from "ngx-spinner";
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +29,7 @@ import { environment } from '../environments/environment';
     CommonModule,
     SharedModule,
     HomeModule,
+    NgxSpinnerModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable
